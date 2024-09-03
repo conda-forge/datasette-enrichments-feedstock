@@ -1,5 +1,5 @@
 {% set name = "datasette-enrichments" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6b1658189bc33971b3efb682a2e58af626be2f4fecb1aa8af2a73b7c170faccc
+  sha256: 7eaa158eaa2cce3aac12a55dc6c6c42b29b22212e5b57920268c04eb18594146
 
 build:
   noarch: python
