@@ -18,6 +18,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - datasette-secrets >=0.2
     - python >={{ python_min }}
