@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: datasette-enrichments
-  version: 0.5.1
+  version: "0.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -24,7 +25,7 @@ requirements:
     - setuptools
   run:
     - datasette-secrets >=0.2
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     - datasette
     - wtforms
 
@@ -33,12 +34,7 @@ tests:
       imports:
         - datasette_enrichments
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      pip_check: true
 
 about:
   summary: Tools for running enrichments against data stored in Datasette
